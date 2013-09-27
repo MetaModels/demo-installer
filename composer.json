@@ -1,0 +1,62 @@
+{
+	"name": "metamodels/demo-installer",
+	"description": "MetaModels demo website install environment",
+	"keywords":["contao", "metamodels", "demo"],
+	"type":"contao-module",
+	"homepage":"http://now.metamodel.me/",
+	"license":"LGPL-3.0+",
+	"authors": [
+		{
+			"name":"Christian Schiffler",
+			"email":"c.schiffler@cyberspectrum.de",
+			"homepage":"http://www.cyberspectrum.de",
+			"role":"Developer"
+		},
+		{
+			"name":"Andreas Isaak",
+			"email":"info@andreas-isaak.de",
+			"homepage":"http://www.andreas-isaak.de",
+			"role":"Developer"
+		}
+	],
+	"support":{
+		"email":"mail@metamodel.me",
+		"issues":"https://github.com/MetaModels/demo-installer/issues",
+		"wiki":"http://de.contaowiki.org/MetaModels",
+		"irc":"irc://irc.freenode.org/contao.mm",
+		"source":"https://github.com/MetaModels/demo-installer"
+	},
+	"require":{
+		"php":">=5.3",
+		"contao/core": ">=2.11,<4.0",
+		"contao-community-alliance/composer-installer": "*",
+		"metamodels/core":"~1"
+	},
+	"require-dev": {
+		"metamodels/php-coding-standard":"1.0.*@dev",
+		"cyberspectrum/contao-toolbox": "1.0.*@dev"
+	},
+	"conflict": {
+		"contao/core": "3.0.*"
+	},
+	"autoload": {
+		"classmap": ["src"]
+	},
+	"extra":{
+		"contao": {
+			"symlinks":{
+				"src/system/modules/metamodels_demo_installer":"system/modules/metamodels_demo_installer"
+			},
+			"transifex": {
+				"project": "metamodels",
+				"prefix": "demo-installer-",
+				"languages_cto": "src/system/modules/metamodels_demo_installer/languages",
+				"languages_tx": ".tx"
+			}
+		},
+		"branch-alias": {
+			"dev-master": "1.0.x-dev",
+			"dev-contao3": "1.1.x-dev"
+		}
+	}
+}
